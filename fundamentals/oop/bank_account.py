@@ -3,7 +3,7 @@ class BankAccount:
     all_accounts = []
 
     def __init__(self, int_rate = 0, balance = 0):
-        self.rate = init_rate
+        self.rate = int_rate
         self.acct_balance = balance
         BankAccount.all_accounts.append(self)
     
