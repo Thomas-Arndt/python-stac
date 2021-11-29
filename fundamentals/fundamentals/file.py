@@ -14,8 +14,8 @@ person['eye_color'] = 'blue' # list change value
 print(fruit[2]) # log statement, list access value
 
 if num1 > 45: # conditional if
-    print("It's greater") log statement
-else: else # conditional else
+    print("It's greater") # log statement
+else:
     print("It's lower") # log statement
 
 if len(string) < 5: # conditional if, length check
