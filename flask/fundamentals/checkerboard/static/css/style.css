@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    margin: 20px;
+}
+
+.board{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    border: 2px solid black;
+    box-shadow: 0 0 10px black;
+}
+
+.row{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+}
+
+.box{
+    width: 60px;
+    height: 65px;
+}
