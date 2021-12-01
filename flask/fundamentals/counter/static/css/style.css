@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+.outer-container{
+    padding: 50px;
+}
+
+.inner-container{
+    display: flex;
+    gap: 20px;
+}
+
+h1{
+    text-align: center;
+}
+
+h3{
+    margin: 20px;
+    text-align: center;
+}
+
+button{
+    color: white;
+    padding: 7px 14px;
+    border: 2px solid darkslategrey;
+    box-shadow: 3px 3px 3px black;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.add_two{
+    background-color: green;
+}
+
+.reset{
+    background-color: red;
+}
+
+.increment-form{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.increment-form>input{
+    height: 25px;
+}
+
+.increment-form>button{
+    background-color: blue;
+}
