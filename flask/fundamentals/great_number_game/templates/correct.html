@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Great Number Game!</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <h1>Welcome to The Great Number Game!</h1>
+        <h3>I am thinking of a number between 1 and 100</h3>
+        <div class="container guess-box correct">
+            <h3 class="guess-text">{{ response_correct }}</h3>
+            <h4 class="guess-text">It took you {{session['guess_count']}} attempt(s) to guess the number.</h4>
+            <form action="/" method="">
+                <button type="submit">Reset</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
