@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Gold</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container flex-column gap-20 box-border">
+        <h1>Ninja Gold</h1>
+        <div class="flex-row space-between">
+            <div class="flex-row gap-10">
+                <p>Your Gold:</p>
+                <p class="gold-box box-border">{{ session['gold'] }}</p>
+            </div>
+            <form action="/reset" method="post">
+                <input type="submit" value="Reset" class="reset-btn box-border">
+            </form>
+        </div>
+        <div class="flex-row space-between">
+            <div class="property-box flex-column space-between align-center gap-10 box-border">
+                <h3>Farm</h3>
+                <p class="text-wrap text-center">(earns 10-20 gold)</p>
+                <form action="/process_money/10/20/farm" method="post">
+                    <input type="hidden" name="property" value="farm">
+                    <input type="submit" class="gold-btn box-border" value="Find Gold!">
+                </form>
+            </div>
+            <div class="property-box flex-column space-between align-center gap-10 box-border">
+                <h3>Cave</h3>
+                <p class="text-wrap text-center">(earns 5-10 gold)</p>
+                <form action="/process_money/5/10/cave" method="post">
+                    <input type="hidden" name="property" value="cave">
+                    <input type="submit" class="gold-btn box-border" value="Find Gold!">
+                </form>
+            </div>
+            <div class="property-box flex-column space-between align-center gap-10 box-border">
+                <h3>House</h3>
+                <p class="text-wrap text-center">(earns 2-5 gold)</p>
+                <form action="/process_money/2/5/house" method="post">
+                    <input type="hidden" name="property" value="house">
+                    <input type="submit" class="gold-btn box-border" value="Find Gold!">
+                </form>
+            </div>
+            <div class="property-box flex-column space-between align-center gap-10 box-border">
+                <h3>Casino</h3>
+                <p class="text-wrap text-center">(earns/takes 0-50 gold)</p>
+                <form action="/process_money/-50/50/casino" method="post">
+                    <input type="hidden" name="property" value="casino">
+                    <input type="submit" class="gold-btn box-border" value="Find Gold!">
+                </form>
+            </div>
+        </div>
+        <div class="activities-box box-border">
+            <ul class="activity">
+                {{ session['activity']|safe }}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

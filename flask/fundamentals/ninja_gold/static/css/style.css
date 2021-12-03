@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 800px;
+    height: fit-content;
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 35px;
+    border-radius: 20px;
+}
+
+h1{
+    text-align: center;
+    font-size: 46px;
+}
+
+.gold-box{
+    width: 70px;
+    height: fit-content;
+    border: 1px solid black;
+    padding: 5px 0;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.property-box{
+    padding: 25px 15px;
+    border-radius: 10px;
+    width: 160px;
+    height: 160px;
+}
+
+.activities-box{
+    width: 100%;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 10px
+}
+
+.flex-row{
+    display: flex;
+    align-items: center;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.activity{
+    display: flex;
+    flex-direction: column-reverse;
+    list-style-type: none;
+}
+
+.gap-10{
+    gap: 10px;
+}
+
+.gap-20{
+    gap: 20px;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+
+.padding-x-20{
+    padding: 0 20px;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.gold-btn{
+    background-color: gold;
+    padding: 2px 4px;
+}
+
+.reset-btn{
+    background-color: red;
+    padding: 3px 6px;
+}
+
+.box-border{
+    border: 2px solid black;
+    box-shadow: 2px 2px 4px black;
+}
+
+.text-wrap{
+    word-wrap: normal;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.red-text{
+    color: red;
+}
+
+.green-text{
+    color: green;
+}
