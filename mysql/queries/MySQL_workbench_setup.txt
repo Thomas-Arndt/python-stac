@@ -1,0 +1,10 @@
+INSERT INTO tweets (tweet, user_id, created_at, updated_at)
+VALUES ("Just added this tweet now", 1, now(), now());
+
+SELECT tweet FROM tweets;
+
+UPDATE tweets SET tweet = 'I just updated this tweet'
+WHERE id=14;
+
+DELETE FROM tweets
+WHERE id=12;

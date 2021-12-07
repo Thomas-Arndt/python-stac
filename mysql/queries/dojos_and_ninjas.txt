@@ -1,0 +1,49 @@
+INSERT INTO dojos (name)
+VALUES ('Online');
+
+INSERT INTO dojos (name)
+VALUES ('Bellevue');
+
+INSERT INTO dojos (name)
+VALUES ('Boise');
+
+DELETE FROM dojos
+WHERE id<=3;
+
+INSERT INTO dojos (name)
+VALUES ('Online');
+
+INSERT INTO dojos (name)
+VALUES ('Bellevue');
+
+INSERT INTO dojos (name)
+VALUES ('Boise');
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUES ('Ninja', 'One', 42, 4);
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUES ('Ninja', 'Two', 21, 4);
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUES ('Ninja', 'Three', 33, 4);
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUES ('Ninja', 'Four', 33, 6);
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUES ('Ninja', 'Five', 33, 6);
+
+INSERT INTO ninjas (first_name, last_name, age, dojo_id)
+VALUES ('Ninja', 'Six', 33, 6);
+
+SELECT * FROM ninjas
+WHERE dojo_id=4;
+
+SELECT * FROM ninjas
+WHERE dojo_id=6;
+
+SELECT dojos.name
+FROM dojos
+JOIN ninjas ON dojo_id = dojos.id
+WHERE ninjas.id=8;
