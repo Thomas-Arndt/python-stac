@@ -3,3 +3,4 @@ from flask_app.controllers import users
 
 while __name__=="__main__":
     app.run(debug=True)
+    
