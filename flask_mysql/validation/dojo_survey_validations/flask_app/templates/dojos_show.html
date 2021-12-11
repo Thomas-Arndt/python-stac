@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container col-6 offset-3 bg-dark mt-3 p-4">
+        <h1 class="text-primary">{{ data['name'] }}</h1>
+        <p class="text-white mt-3">Location: {{ data['location'] }}</p>
+        <p class="text-white">Language: {{ data['language'] }}</p>
+        <p class="text-white">Comments: {{ data['comments'] }}</p>
+        <form action="/" method="">
+            <button type="submit" class="btn btn-primary mt-3 col-3">Home</button>
+        </form>
+    </div>
+</body>
+</html>
