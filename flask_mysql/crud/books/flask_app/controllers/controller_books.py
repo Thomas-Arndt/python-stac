@@ -25,5 +25,5 @@ def display_all_books():
 def display_one_book(book_id):
     book = Book.get_one(book_id)[0]
     favorited_by = Favorite.get_favorited_by(book_id)
-    all_authors = Author.get_all()
-    return render_template("one_book.html", book=book, favorited_by=favorited_by, all_authors=all_authors)
+    authors_can_favorite = Favorite.get_unfavorited_author_by_book(book_id)
+    return render_template("one_book.html", book=book, favorited_by=favorited_by, authors_can_favorite=authors_can_favorite)

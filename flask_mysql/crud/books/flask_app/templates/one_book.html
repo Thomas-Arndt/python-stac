@@ -33,7 +33,7 @@
                 <label for="author_id" class="text-info">Author</label>
                 <select name="author_id" class="form-control">
                     <option value="">--Select Author--</option>
-                    {% for author in all_authors %}
+                    {% for author in authors_can_favorite %}
                         <option value="{{ author.id }}">{{ author.name }}</option>
                     {% endfor %}
                 </select>

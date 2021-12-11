@@ -22,3 +22,9 @@ class Favorite:
     def get_favorited_by(cls, book_id):
         query=f"SELECT * FROM authors JOIN favorites ON favorites.author_id=authors.id JOIN books ON favorites.book_id=books.id WHERE books.id={book_id};"
         return connectToMySQL('books_schema').query_db(query)
+
+    @classmethod
+    def get_unfavorited_author_by_book(cls, book_id):
+        data={"id":book_id}
+        query="SELECT * FROM authors WHERE authors.id NOT IN (SELECT author_id FROM favorites WHERE book_id = %(id)s);"
+        return connectToMySQL('books_schema').query_db(query, data)
