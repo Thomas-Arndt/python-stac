@@ -6,6 +6,8 @@ for n in range(10):
 print(unsorted_list)
 
 def selection_sort(rand_list):
+    if len(rand_list)==0:
+        return rand_list
     for stepper in range(len(rand_list)):
         min_num=rand_list[stepper]
         min_num_index=stepper
