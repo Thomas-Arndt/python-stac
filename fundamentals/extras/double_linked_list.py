@@ -106,9 +106,20 @@ class DList:
             tail_runner=tail_runner.prev
         return self
     
-    # def reverse_list(self):
-        
-    #     return self
+    def reverse_list(self):
+        runner=self.head.next
+        while (runner!=None):
+            temp=runner.prev.prev
+            runner.prev.prev=runner.prev.next
+            runner.prev.next=temp
+            runner=runner.next
+        temp=self.head
+        self.head=self.tail
+        self.tail=temp
+        temp=self.head.prev
+        self.head.prev=self.head.next
+        self.head.next=temp
+        return self
 
     
     def print_values(self):
@@ -169,6 +180,6 @@ print("**************")
 new_list.remove_duplicates()
 new_list.print_values()
 print("**************")
-# new_list.reverse_list()
-# new_list.print_values()
-# print("**************")
+new_list.reverse_list()
+new_list.print_values()
+print("**************")
