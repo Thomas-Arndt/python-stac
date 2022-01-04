@@ -28,14 +28,15 @@ function unitChange(element){
 
 
 function getData(element){
+    const apiKey=''
     const location = element.innerText;
     element.innerText=document.getElementById("current_city").innerText;
     element.city=document.getElementById("current_city").city;
     document.getElementById("current_city").innerText=location;
     document.getElementById('current_city').city=location;
     
-    const CUR_API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=b02fd43c2b30a7516749f6fa21acf81b&units=imperial`;
-    const FUT_API_URL = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=b02fd43c2b30a7516749f6fa21acf81b&units=imperial`;
+    const CUR_API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=imperial`;
+    const FUT_API_URL = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${apiKey}&units=imperial`;
     
     fetch(CUR_API_URL)
     .then(resp => resp.json())
