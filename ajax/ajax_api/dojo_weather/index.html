@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navigation flex-row-outside">
+        <h1>DojoWeather</h1>
+        <ul class="flex-row-even city-navigation">
+            <li><a href="#" class="city-nav-link" city="Burbank" onclick="getData(this)">Burbank</a></li>
+            <li><a href="#" class="city-nav-link" city="Chicago" onclick="getData(this)">Chicago</a></li>
+            <li><a href="#" class="city-nav-link" city="Dallas" onclick="getData(this)">Dallas</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="city-header">
+            <div class="flex-row-outside current-city">
+                <h2 class="fit-content" id="current_city" city="San Jose">San Jose</h2>
+                <div class="flex-row-outside unit-selector">
+                    <label for="unit-selector">show temperature in</label>
+                    <select name="unit-selector" id="unit-selector" onchange="unitChange(this)">
+                        <option value="fahrenheit">&#176;F</option>
+                        <option value="celcius">&#176;C</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="tile-block">
+            <div class="flex-row-tiles flex-row-outside">
+                <div class="day-tile tile-gap">
+                    <h3 class="day-tile-header">Today</h3>
+                    <img class="weather-image" id="wi1" src="" alt="No Image">
+                    <p class="weather-description" id="wd1">some rain</p>
+                    <div class="flex-row-outside temp-row">
+                        <h3 class="high-temp"><span id="t1">24</span>&#176;</h3>
+                        <h3 class="low-temp"><span id="t2">18</span>&#176;</h3>
+                    </div>
+                </div>
+                <div class="day-tile tile-gap">
+                    <h3 class="day-tile-header">Tomorrow</h3>
+                    <img class="weather-image" id="wi2" src="" alt="No Image">
+                    <p class="weather-description" id="wd2">some sun</p>
+                    <div class="flex-row-outside temp-row">
+                        <h3 class="high-temp"><span id="t3">27</span>&#176;</h3>
+                        <h3 class="low-temp"><span id="t4">19</span>&#176;</h3>
+                    </div>
+                </div>
+                <div class="day-tile tile-gap">
+                    <h3 class="day-tile-header" id="dayThree"></h3>
+                    <img class="weather-image" id="wi3" src="" alt="No Image">
+                    <p class="weather-description" id="wd3">some clouds</p>
+                    <div class="flex-row-outside temp-row">
+                        <h3 class="high-temp"><span id="t5">21</span>&#176;</h3>
+                        <h3 class="low-temp"><span id="t6">16</span>&#176;</h3>
+                    </div>
+                </div>
+                <div class="day-tile">
+                    <h3 class="day-tile-header" id="dayFour"></h3>
+                    <img class="weather-image" id="wi4" src="" alt="No Image">
+                    <p class="weather-description" id="wd4">some sun</p>
+                    <div class="flex-row-outside temp-row">
+                        <h3 class="high-temp"><span id="t7">26</span>&#176;</h3>
+                        <h3 class="low-temp"><span id="t8">21</span>&#176;</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <aside class="flex-row-outside cookie-time" id="cookie">
+        <div class="flex-row-even">
+            <img src="./assets/cookie.png" alt="cookie icon">
+            <div class="cookie-time-text">
+                <h3>Stop! Cookie time</h3>
+                <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyse our traffic. <a href="#">Read more...</a></p>
+            </div>
+        </div>
+        <button class="accept-cookie" onclick="closeCookie()">I Accept</button>
+    </aside>
+    <script src="script.js"></script>
+</body>
+</html>
