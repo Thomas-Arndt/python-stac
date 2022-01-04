@@ -9,6 +9,8 @@ new_user_form.onsubmit = function(e){
     .then(data => {
         display_all_users();
     })
+    document.getElementById("user_name").value=""
+    document.getElementById("email").value=""
 }
 
 function display_all_users(){
